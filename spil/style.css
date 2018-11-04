@@ -1,0 +1,772 @@
+html,
+body {
+    margin: 0;
+}
+
+#screen {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 56.25vw;
+
+}
+
+/********effekter****/
+#playknap:hover {
+    cursor: pointer;
+    transform: scale(2);
+}
+
+#settings_titel:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+#settings1:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+.cometGone {
+    animation-name: cometGone;
+    animation-duration: .7s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.59, -0.56, .77, 1.34);
+    animation-fill-mode: forwards;
+}
+
+@keyframes cometGone {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
+#game_background {
+    background-image: url(svg/spillebaggrund.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: -100;
+
+}
+
+
+#menu_background {
+    background-image: url(svg/titelsk%C3%A6rm.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+
+
+}
+
+.menu_animation {
+    animation-name: menu_animation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.heart {
+    animation-name: heart;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+/**************Spille baggrund**********/
+#catronaut {
+    background-image: url(svg/catronatglad.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 15vw;
+    height: 42vh;
+    top: 26vw;
+    left: 83vw;
+    z-index: 1;
+
+}
+
+
+
+#point {
+    background-image: url(svg/point.svg);
+    background-size: 50%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 12vw;
+    height: 8vw;
+    left: 92vw;
+    top: 2vw;
+    z-index: 1;
+}
+
+/**#timer {
+    background-image: url(svg/timer.svg);
+    background-size: 50%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 12vw;
+    height: 10vh;
+    left: 0;
+    top: 17vw;
+}***/
+
+
+#settings1 {
+    background-image: url(svg/settings.svg);
+    background-size: 50%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 5vw;
+    left: 0;
+    top: 45vw;
+}
+
+
+#komet {
+    background-image: url(svg/komet.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: 35vw;
+    left: 55vw;
+    top: -25vw;
+}
+
+#heart1 {
+    background-image: url(svg/1liv.svg);
+    background-size: 50%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 12vw;
+    height: 6vw;
+    left: 0;
+    top: 2vw;
+    z-index: 1;
+}
+
+#heart2 {
+    background-image: url(svg/1liv.svg);
+    background-size: 50%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 12vw;
+    height: 6vw;
+    left: 0;
+    top: 7vw;
+    z-index: 1;
+}
+
+#heart3 {
+    background-image: url(svg/1liv.svg);
+    background-size: 50%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 12vw;
+    height: 6vw;
+    left: 0;
+    top: 12vw;
+    z-index: 1;
+}
+
+/************************TITELSKÆRM***************************/
+
+#catronautmenu1 {
+    background-image: url(svg/catronatglad.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 15vw;
+    height: 42vh;
+    top: 18vw;
+    left: 29vw;
+    transform: rotate(14deg);
+    z-index: 6;
+
+
+}
+
+#playknap {
+    background-image: url(svg/play.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 15vw;
+    height: 30vh;
+    top: 10vw;
+    left: 65vw;
+    transform: rotate(-5deg);
+    z-index: 6;
+}
+
+#settingsKnap {
+    background-image: url(svg/settings.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 20vh;
+    top: 40vw;
+    left: 0vw;
+    z-index: 6;
+}
+
+#settings_titel {
+    background-image: url(svg/settings.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 20vh;
+    top: 40vw;
+    left: 0vw;
+    z-index: 6;
+}
+
+#settings_skaerm {
+    background-image: url(svg/settingsclear.svg);
+    background-size: 75%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 48vw;
+    left: 12vw;
+    z-index: 10;
+}
+
+
+
+#settings_spilskaerm {
+    background-image: url(svg/settings_1.svg);
+    background-size: 75%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 48vw;
+    left: 12vw;
+    top: 0vw;
+    z-index: 10;
+}
+
+
+
+#settings_titel_tilbage {
+    background-image: url(svg/tilbage.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10vw;
+    left: 63vw;
+    top: 17.5vw;
+    z-index: 10;
+    cursor: pointer;
+
+}
+
+#musik {
+    background-image: url(svg/lydeffekter.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10vw;
+    left: 44vw;
+    top: 16.5vw;
+    z-index: 10;
+    cursor: pointer;
+
+}
+
+#lyd {
+    background-image: url(svg/lyd2.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 12vw;
+    height: 10vw;
+    left: 25vw;
+    top: 18vw;
+    z-index: 10;
+    cursor: pointer;
+}
+
+/***********************CLASSES******************************/
+.comet_fall_down {
+    animation-name: fall_down;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+    top: -10vw;
+}
+
+.comet_fall_down1 {
+    animation-name: fall_down1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+    top: -10vw;
+}
+
+.comet_fall_down2 {
+    animation-name: fall_down2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+    top: -10vw;
+}
+
+.comet_fall_down3 {
+    animation-name: fall_down3;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+    top: -10vw;
+}
+
+.comet_fall_down4 {
+    animation-name: fall_down4;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+    top: -10vw;
+}
+
+
+.comet_fall_down5 {
+    animation-name: fall_down5;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+    top: -10vw;
+}
+
+.comet_fall_down6 {
+    animation-name: fall_down6;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+    top: -10vw;
+}
+
+.catronaut {
+    animation-name: catronaut;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+
+}
+
+.catronautmenu1 {
+    animation-name: catronautmenu1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+
+/***.stjerne {
+    animation-name: stjerne;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+}**/
+
+.point {
+    animation-name: point;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+/**.hjerter {
+    animation-name: hjerter;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}**/
+
+
+
+.komet {
+    position: absolute;
+    width: 9vw;
+    height: 12vw;
+    background-image: url(svg/komet.svg);
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.komet_pos {
+    left: 30vw;
+
+}
+
+.komet_pos1 {
+    left: 20vw;
+
+}
+
+.komet_pos2 {
+    left: 50vw;
+
+}
+
+.komet_pos3 {
+    left: 40vw;
+}
+
+.komet_pos4 {
+    left: 55vw;
+}
+
+.komet_pos5 {
+    left: 75vw;
+}
+
+.komet_pos6 {
+    left: 60vw;
+}
+
+/************************* ID***********************/
+#komet1 {
+    background-image: url(svg/komet.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: 20vw;
+
+    top: -15vw;
+    cursor: crosshair;
+}
+
+#komet2 {
+    background-image: url(svg/komet.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 17vw;
+
+    top: -15vw;
+    cursor: crosshair;
+}
+
+#komet3 {
+    background-image: url(svg/komet.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 16vw;
+
+    top: -16vw;
+
+    cursor: crosshair;
+}
+
+#komet4 {
+    background-image: url(svg/komet.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 15vw;
+
+    top: -15vw;
+    cursor: crosshair;
+}
+
+#komet5 {
+    background-image: url(svg/komet.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 15vw;
+
+    top: -15vw;
+    cursor: crosshair;
+}
+
+#komet6 {
+    background-image: url(svg/komet.svg);
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: 20vw;
+
+    top: -20vw;
+    cursor: crosshair;
+}
+
+#points {
+    position: absolute;
+    left: 87vw;
+    color: white;
+    font-size: 2rem;
+    font-family: sans-serif;
+    display: flex;
+}
+
+#points .star {
+    background-image: url(svg/point.svg);
+    position: absolute;
+    background-size: 100%;
+    width: 2rem;
+    height: 2rem;
+}
+
+#points .antal {
+    font-family: sans-serif;
+    width: 7rem;
+    text-align: right;
+    color: white;
+}
+
+.antal {
+    color: white;
+    font-family: sans-serif;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 2vw;
+    right: 7.9vw;
+    font-size: 2.2rem;
+}
+
+#start {
+    background-image: url(svg/play.svg);
+    display: none;
+}
+
+
+#settings {
+    background-image: url(svg/settings_1.svg);
+    display: none;
+}
+
+#gameover {
+    background-image: url(svg/gameover2.svg);
+    display: none;
+}
+
+#levelcomplete {
+    background-image: url(svg/levelcomplete.svg);
+    display: none;
+}
+
+
+/******************keyframes****************/
+
+@keyframes fall_down {
+    from {
+        transform: translateY(-50vw);
+    }
+
+    to {
+        transform: translateY(80vw);
+    }
+}
+
+@keyframes fall_down1 {
+    from {
+        transform: translateY(-20vw);
+    }
+
+    to {
+        transform: translateY(80vw);
+    }
+}
+
+
+@keyframes fall_down2 {
+    from {
+        transform: translateY(-10vw);
+    }
+
+    to {
+        transform: translateY(80vw);
+    }
+}
+
+@keyframes fall_down3 {
+    from {
+        transform: translateY(-40vw);
+    }
+
+    to {
+        transform: translateY(80vw);
+    }
+}
+
+@keyframes fall_down4 {
+    from {
+        transform: translateY(-80vw);
+    }
+
+    to {
+        transform: translateY(80vw);
+    }
+}
+
+@keyframes fall_down5 {
+    from {
+        transform: translateY(-30vw);
+    }
+
+    to {
+        transform: translateY(80vw);
+    }
+}
+
+@keyframes fall_down6 {
+    from {
+        transform: translateY(-30vw);
+    }
+
+    to {
+        transform: translateY(80vw);
+    }
+}
+
+
+@keyframes menu_animation {
+
+    0% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+
+    50% {
+
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotateY(360deg);
+        opacity: 0;
+    }
+}
+
+/****catronaut spillebaggrund***/
+@keyframes catronaut {
+    0% {
+        transform: translateY(-2vw);
+    }
+
+    50% {
+        transform: translateY(-1vw);
+    }
+
+    100% {
+        transform: translateY(-2vw);
+    }
+}
+
+/****timer***/
+/***@keyframes stjerne {
+    0% {
+
+        transform: translateY(-1.5vw);
+    }
+
+    50% {
+        transform: translateY(-0.5vw);
+    }
+
+    100% {
+        transform: translateY(-1.5vw);
+    }
+}**/
+
+
+/***Point***/
+@keyframes point {
+    0% {
+
+        transform: translateY(-1vw);
+    }
+
+    50% {
+        transform: translateY(-0.5vw);
+    }
+
+    100% {
+        transform: translateY(-1vw);
+    }
+}
+
+/****catronaut menubaggrund****/
+@keyframes catronautmenu1 {
+
+    0% {
+        transform: translateY(2vw);
+    }
+
+    50% {
+        transform: translateY(1vw);
+    }
+
+    100% {
+        transform: translateY(2vw);
+    }
+}
+
+/***LIV****/
+
+@keyframes heart {
+    0% {
+
+        transform: translateY(-1vw);
+    }
+
+    50% {
+        transform: translateY(-0.5vw);
+    }
+
+    100% {
+        transform: translateY(-1vw);
+    }
+}
+
+
+/**html * {
+    visibility: hidden;
+}**/
